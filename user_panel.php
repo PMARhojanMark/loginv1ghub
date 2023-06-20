@@ -42,15 +42,16 @@ if(!isset($_SESSION['user_name'])){
                     <span class="link-name">Dashboard</span>
                 </a></li>
                 <li><a href="#">
-                    <i class="uil uil-files-landscapes"></i>
+                    <i class="uil uil-folder"></i>
                     <span class="link-name">File Maintenance</span>
+                    <!--uil uil-folder-open-->
                 </a></li>
                 <li><a href="#">
-                    <i class="uil uil-files-landscapes"></i>
+                    <i class="uil uil-process"></i>
                     <span class="link-name">Initial Term Processing</span>
                 </a></li>
                 <li><a href="#">
-                    <i class="uil uil-files-landscapes"></i>
+                    <i class="uil uil-paperclip"></i>
                     <span class="link-name">Term Processing</span>
                 </a></li>
                 <li><a href="#">
@@ -58,7 +59,7 @@ if(!isset($_SESSION['user_name'])){
                     <span class="link-name">Evaluation</span>
                 </a></li>
                 <li><a href="#">
-                    <i class="uil uil-files-landscapes"></i>
+                    <i class="uil uil-graph-bar"></i>
                     <span class="link-name">End Term Processing</span>
                 </a></li>
             </ul>
@@ -114,7 +115,7 @@ if(!isset($_SESSION['user_name'])){
                 <div class="activity-data">
                     <div class="data names">
                         <span class="data-title">Name</span>
-                        <span class="data-list">Prem Shahi</span>
+                        <span class="data-list">Rhojan Mark</span>
                         <span class="data-list">Deepa Chand</span>
                         <span class="data-list">Manisha Chand</span>
                         <span class="data-list">Pratima Shahi</span>
@@ -168,5 +169,6 @@ if(!isset($_SESSION['user_name'])){
     </section>
 
     <script src="script.js"></script>
+    <script src="navbar.js"></script>
 </body>
 </html>
