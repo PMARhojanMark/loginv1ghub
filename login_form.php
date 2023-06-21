@@ -5,7 +5,6 @@
 session_start();
 
 if(isset($_POST['submit'])){
-
     $email = $_POST ['email'];
     $password = $_POST ['pass'];
     
@@ -34,7 +33,40 @@ if(isset($_POST['submit'])){
    }
 
 };
+
+
+
 ?>
+
+
+<!-- fixed account C for cadet F for faculty -->
+
+<?php
+/*
+    // Execute the query
+    $result = mysqli_query($conn, $query);
+
+    if ($result && mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_assoc($result);
+
+        // Check the user type based on a variable value
+        if ($row['variable'] == 'C') {
+            $_SESSION['user_type'] = 'user';
+            $_SESSION['username'] = $row['name'];
+            header('location: user_panel.php');
+        } elseif ($row['variable'] == 'F') {
+            $_SESSION['user_type'] = 'admin';
+            $_SESSION['username'] = $row['name'];
+            header('location: admin_panel.php');
+        }
+    } else {
+        $error = 'Incorrect email or password!';
+    }
+}
+
+*/
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -46,6 +78,31 @@ if(isset($_POST['submit'])){
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style3.css">
+
+   <style>
+    @keyframes animatedBackground {
+      0% {
+        background-image: url("image/bg1.jpg");
+      }
+      33.33% {
+        background-image: url("image/bg2.jpg");
+      }
+      66.33% {
+        background-image: url("image/bg3.jpg");
+      }
+      100% {
+        background-image: url("image/bg4.jpg");
+      }
+    }
+
+    body {
+      animation: animatedBackground 10s infinite;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+
 
 </head>
 <body class="body">
