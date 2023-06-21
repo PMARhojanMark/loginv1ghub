@@ -16,12 +16,16 @@
 <body class="body">
 <div class="form-container">
 
+<div class="logo-align">
+      <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Philippine_Military_Academy_%28PMA%29.svg/1200px-Philippine_Military_Academy_%28PMA%29.svg.png">
+   </div>
+
    <form action="insert1.php" method="post">
       <h3>Register Now</h3>
       <?php
-      if(isset($error)){
-         foreach($error as $error){
-            echo '<span class="error-msg">'.$error.'</span>';
+      if(!empty($error)){
+         foreach($error as $errorMsg){
+            echo '<span class="error-msg">'.$errorMsg.'</span>';
          };
       };
       ?>
@@ -29,6 +33,9 @@
       <input type="email" name="email" required placeholder="enter your email">
       <input type="password" name="pass" required placeholder="enter your password">
       <input type="password" name="cpass" required placeholder="confirm your password">
+      <select name="user_type">
+         <option value="user">user</option>
+      </select>
       <input type="submit" name="submit" value="submit" class="form-btn">
       <p>already have an account? <a href="login_form.php">login now</a></p>
    </form>
