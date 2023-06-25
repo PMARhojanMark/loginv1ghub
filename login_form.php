@@ -80,29 +80,14 @@ if(isset($_POST['submit'])){
    <link rel="stylesheet" href="css/style3.css">
 
    <style>
-    @keyframes animatedBackground {
-      0% {
-        background-image: url("image/bg1.jpg");
+      .body {
+         background-image: url('image/bg1.jpg');
+         background-position: center bottom -150px;
+         background-repeat: no-repeat;
+         background-size: 100%;
+         background-attachment: fixed;
       }
-      33.33% {
-        background-image: url("image/bg2.jpg");
-      }
-      66.33% {
-        background-image: url("image/bg3.jpg");
-      }
-      100% {
-        background-image: url("image/bg4.jpg");
-      }
-    }
-
-    body {
-      animation: animatedBackground 10s infinite;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-    }
-  </style>
-
+   </style>
 
 </head>
 <body class="body">

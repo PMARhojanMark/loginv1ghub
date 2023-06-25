@@ -1,0 +1,17 @@
+
+.sub-links {
+    display: none;
+}
+
+.side {
+    padding: 5px;
+}
+
+.nav, .sub-menu {
+    display: none;
+}
+
+.sub-btn:hover .sub-links {
+    display: none;
+}   
+

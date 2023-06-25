@@ -12,6 +12,15 @@
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style3.css">
 
+   <style>
+      .body {
+         background-image: url('image/bg1.jpg');
+         background-position: center bottom -150px;
+         background-repeat: no-repeat;
+         background-size: 100%;
+         background-attachment: fixed;
+      }
+   </style>
 
 </head>
 <body class="body">

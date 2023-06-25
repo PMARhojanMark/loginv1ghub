@@ -18,7 +18,8 @@ if(!isset($_SESSION['user_name'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!----======== CSS ======== -->
-    <link rel="stylesheet" href="css/style1.css"> 
+    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="css/style4.css">
 
     <!----===== Iconscout CSS ===== -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
@@ -35,8 +36,9 @@ if(!isset($_SESSION['user_name'])){
             <span class="logo_name">CIS</span>
         </div>
 
+    <div class="side">
         <div class="menu-items">
-            <div class="nav-links">
+            <div class="nav-dashboard">
                 <a href="#">
                     <i class="uil uil-estate"></i>
                     <span class="link-name">Dashboard</span>
@@ -49,37 +51,43 @@ if(!isset($_SESSION['user_name'])){
                     File Maintenance
                     <i class="uil uil-angle-right dropdown"></i>
                 </a>
-                <div>
-                    <a href="cadet.html" class="link-name">Cadet</a>
-                    <a href="faculty.html" class="link-name">Faculty</a>
-                    <a href="department.html" class="link-name">Department</a>
-                    <a href="courses.html" class="link-name">Courses</a>
+                <div class="sub-menu">
+                    <li>
+                        <a href="cadet.html" class="link-name">Cadet</a>
+                        <a href="faculty.html" class="link-name">Faculty</a>
+                        <a href="department.html" class="link-name">Department</a>
+                        <a href="courses.html" class="link-name">Courses</a>
+                    </li>
                 </div>
             </div>
 
             <div class="nav-links">
-                <a href="#">
+                <a class="sub-btn">
                     <i class="uil uil-process"></i>
                     Initial Term Processing
                     <i class="uil uil-angle-right dropdown"></i>
                 </a>
                 <div class="sub-menu">
                     <div class="nav-links">
-                        <a href="#">
+                        <a class="sub-btn">
                             <i class="uil uil-gear">
                                 Term Settings
                             </i>
                             <i class="uil uil-angle-right dropdown"></i>
                         </a>
                         <div class="sub-menu">
-                            <a href="cadet.html" class="link-name">ACAD</a>
-                            <a href="faculty.html" class="link-name">Tactics</a>
-                            <a href="department.html" class="link-name">Conduct</a>
-                            <a href="courses.html" class="link-name">Aptitude</a>
+                            <li>
+                                <a href="cadet.html" class="link-name">ACAD</a>
+                                <a href="faculty.html" class="link-name">Tactics</a>
+                                <a href="department.html" class="link-name">Conduct</a>
+                                <a href="courses.html" class="link-name">Aptitude</a>
+                            </li>
                         </div>
                     </div>
-                    <a href="#" class="link-name">Course Offerings</a>
-                    <a href="#" class="link-name">Sectioning</a>
+                    <li>
+                        <a href="#" class="link-name">Course Offerings</a>
+                        <a href="#" class="link-name">Sectioning</a>
+                    </li>
                 </div>
             </div>
 
@@ -89,13 +97,15 @@ if(!isset($_SESSION['user_name'])){
                     Term Processing
                     <i class="uil uil-angle-right dropdown"></i>
                 </a>
-                <div>
-                    <a href="cadet.html" class="link-name">Scheduling</a>
-                    <a href="faculty.html" class="link-name">ACAD Grades Entry</a>
-                    <a href="department.html" class="link-name">Conduct</a>
-                    <a href="courses.html" class="link-name">Aptitude</a>
-                    <a href="courses.html" class="link-name">SPDO</a>
-                    <a href="courses.html" class="link-name">Report</a>
+                <div class="sub-menu">
+                    <li>
+                        <a href="faculty.html" class="link-name">ACAD Grades Entry</a>
+                        <a href="department.html" class="link-name">Conduct</a>
+                        <a href="courses.html" class="link-name">Aptitude</a>
+                        <a href="courses.html" class="link-name">SPDO</a>
+                        <a href="courses.html" class="link-name">Report</a>
+                        <a href="cadet.html" class="link-name">Scheduling</a>
+                    </li>
                 </div>
             </div>
 
@@ -105,14 +115,16 @@ if(!isset($_SESSION['user_name'])){
                     Evaluation
                     <i class="uil uil-angle-right dropdown"></i>
                 </a>
-                <div>
-                    <a href="cadet.html" class="link-name">Faculty</a>
-                    <a href="faculty.html" class="link-name">Course</a>
+                <div class="sub-menu">
+                    <li>
+                        <a href="faculty.html" class="link-name">Course</a>
+                        <a href="cadet.html" class="link-name">Faculty</a>
+                    </li>
                 </div>
             </div>
 
             <div class="nav-links">
-                <a href="#">
+                <a class="sub-btn">
                     <i class="uil uil-process"></i>
                     End Term Processing
                     <i class="uil uil-angle-right dropdown"></i>
@@ -120,54 +132,40 @@ if(!isset($_SESSION['user_name'])){
                 <div class="sub-menu">
                     <a href="#" class="link-name">Reports</a>
                     <div class="nav-links">
-                        <a href="#">
+                        <a class="sub-btn">
                             <i class="uil uil-gear">
                                 Awards
                             </i>
                             <i class="uil uil-angle-right dropdown"></i>
                         </a>
+                    
                         <div class="sub-menu">
-                            <a href="cadet.html" class="link-name">Dean's List</a>
-                            <a href="faculty.html" class="link-name">Comm's List</a>
+                            <li>
+                                <a href="faculty.html" class="link-name">Comm's List</a>
+                                <a href="cadet.html" class="link-name">Dean's List</a>
+                            </li>
                         </div>
-                        <div class="nav-links">
-                            <a href="#">
+                        <div class="">
+                            <a class="sub-btn">
                                 <i class="uil uil-gear">
                                     Graduation Reports
                                 </i>
                                 <i class="uil uil-angle-right dropdown"></i>
                             </a>
+                        
                             <div class="sub-menu">
-                                <a href="cadet.html" class="link-name">Awards</a>
-                                <a href="faculty.html" class="link-name">Latin Awards</a>
+                                <li>
+                                    <a href="faculty.html" class="link-name">Latin Awards</a>
+                                    <a href="cadet.html" class="link-name">Awards</a>
+                                </li>
                             </div>
                         </div>
+                    </div>
                 </div>
             </div>
+        </div>
 
-                <li><a href="#">
-                    <i class="uil uil-folder"></i>
-                    <span class="link-name">File Maintenance</span>
-                    <!--uil uil-folder-open-->
-                </a></li>
-
-                <li><a href="#">
-                    <i class="uil uil-process"></i>
-                    <span class="link-name">Initial Term Processing</span>
-                </a></li>
-                <li><a href="#">
-                    <i class="uil uil-paperclip"></i>
-                    <span class="link-name">Term Processing</span>
-                </a></li>
-                <li><a href="#">
-                    <i class="uil uil-comments"></i>
-                    <span class="link-name">Evaluation</span>
-                </a></li>
-                <li><a href="#">
-                    <i class="uil uil-graph-bar"></i>
-                    <span class="link-name">End Term Processing</span>
-                </a></li>
-            </ul>
+                
             
             <ul class="logout-mode">
                 <li><a href="logout.php">
