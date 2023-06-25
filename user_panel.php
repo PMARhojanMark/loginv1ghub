@@ -38,7 +38,7 @@ if(!isset($_SESSION['user_name'])){
 
     <div class="side">
         <div class="menu-items">
-            <div class="nav-dashboard">
+            <div class="nav-links">
                 <a href="#">
                     <i class="uil uil-estate"></i>
                     <span class="link-name">Dashboard</span>
@@ -167,23 +167,7 @@ if(!isset($_SESSION['user_name'])){
 
                 
             
-            <ul class="logout-mode">
-                <li><a href="logout.php">
-                    <i class="uil uil-signout"></i>
-                    <span class="link-name">Logout</span>
-                </a></li>
-
-                <li class="mode">
-                    <a href="#">
-                        <i class="uil uil-moon"></i>
-                    <span class="link-name">Dark Mode</span>
-                </a>
-
-                <div class="mode-toggle">
-                  <span class="switch"></span>
-                </div>
-            </li>
-            </ul>
+            
         </div>
     </nav>
 
@@ -197,7 +181,34 @@ if(!isset($_SESSION['user_name'])){
             </div>
             
             <!--<img src="images/profile.jpg" alt="">-->
-            <img src="image/profile1.png" alt="">
+            <div class="norms">
+                <div class="loki" onclick="menuToggle();">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVWQTWRsXnQBqP30w3bP2Il7Y9nnybYopPVg&usqp=CAU" width="50" height="50">
+                </div>
+                    <div class="logout">
+                    <!-- Name of the profile
+                        <h3>Famous<br><span>Tinapay Enjoyer</span></h3> -->
+                    <ul>
+                        <li><a href="logout.php">
+                            <i class="uil uil-signout">Logout</i></a>
+                        </li>
+                        <li><a href="#">Settings</a></li>
+                        <li>
+                            <i class="uil uil-moon"></i>
+                            <span class="link-name">
+                                Dark Mode
+                            </span>
+                            <div class="mode-toggle">
+                                <span class="switch"></span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>    
+            </div>
+
+
+           
+
         </div>
 
         <div class="dash-content">
@@ -273,5 +284,6 @@ if(!isset($_SESSION['user_name'])){
 
     <script src="script.js"></script>
     <script src="navbar.js"></script>
+    <script src="onclick.js"></script>
 </body>
 </html>
