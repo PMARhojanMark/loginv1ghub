@@ -192,7 +192,11 @@ if(!isset($_SESSION['user_name'])){
                         <li><a href="logout.php">
                             <i class="uil uil-signout">Logout</i></a>
                         </li>
-                        <li><a href="#">Settings</a></li>
+                        <li><a href="#">
+                                <i class="uil uil-setting"></i>
+                                Settings
+                            </a>
+                        </li>
                         <li>
                             <i class="uil uil-moon"></i>
                             <span class="link-name">

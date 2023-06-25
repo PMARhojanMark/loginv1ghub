@@ -62,7 +62,7 @@
     transform: rotate(45deg);
 }
 
-.norms .unmen ul li
+.norms .logout ul li
 {
     list-style: none;
     padding: 10px 0;
@@ -70,18 +70,18 @@
     display: flex;
     align-items: center;
 }
-.norms .unmen ul li img
+.norms .logout ul li img
 {
     max-width: 20px;
     margin-right: 10px;
     opacity: 0.5;
     transition: 0.5s;
 }
-.norms .unmen ul li:hover img
+.norms .logout ul li:hover img
 {
     opacity: 1;
 }
-.norms .unmen ul li a
+.norms .logout ul li a
 {
     display: inline-block;
     text-decoration: none;
@@ -89,7 +89,7 @@
     font-weight: 500;
     transition: 0.5s;
 }
-.norms .unmen ul li:hover a
+.norms .logout ul li:hover a
 {
     color: #ff5d94;
 }
