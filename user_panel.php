@@ -38,6 +38,7 @@ if(!isset($_SESSION['user_name'])){
 
     <div class="side">
         <div class="menu-items">
+
             <div class="nav-links">
                 <a href="#">
                     <i class="uil uil-estate"></i>
@@ -52,7 +53,7 @@ if(!isset($_SESSION['user_name'])){
                     <i class="uil uil-angle-right dropdown"></i>
                 </a>
                 <div class="sub-menu">
-                    <li>
+                    <li class="">
                         <a href="cadet.html" class="link-name">Cadet</a>
                         <a href="faculty.html" class="link-name">Faculty</a>
                         <a href="department.html" class="link-name">Department</a>
@@ -164,11 +165,7 @@ if(!isset($_SESSION['user_name'])){
                 </div>
             </div>
         </div>
-
-                
-            
-            
-        </div>
+    </div>
     </nav>
 
     <section class="dashboard">
@@ -183,7 +180,7 @@ if(!isset($_SESSION['user_name'])){
             <!--<img src="images/profile.jpg" alt="">-->
             <div class="norms">
                 <div class="loki" onclick="menuToggle();">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVWQTWRsXnQBqP30w3bP2Il7Y9nnybYopPVg&usqp=CAU" width="50" height="50">
+                    <img src="https://qph.cf2.quoracdn.net/main-qimg-78d4a2543d3b55a752e4513675be8459-lq" width="50" height="50">
                 </div>
                     <div class="logout">
                     <!-- Name of the profile
