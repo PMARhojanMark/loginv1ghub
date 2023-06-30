@@ -1,5 +1,5 @@
-
 <?php
+
 $connection = "localhost";
 $username = "root";
 $password = "root";
@@ -15,8 +15,5 @@ if (mysqli_connect_errno()) {
 }
 
 
-
 ?>
-
-
 

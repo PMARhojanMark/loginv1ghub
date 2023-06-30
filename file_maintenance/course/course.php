@@ -9,7 +9,6 @@ if(!isset($_SESSION['user_name'])){
 }
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +22,7 @@ if(!isset($_SESSION['user_name'])){
 
     <!----===== Iconscout CSS ===== -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>CIS Admin Dashboard</title>
 </head>
 <body>
@@ -39,7 +38,7 @@ if(!isset($_SESSION['user_name'])){
     <div class="side">
         <div class="menu-items">
             <div class="nav-links">
-                <a href="user_panel.php">
+                <a href="/loginv1ghub/user_panel.php">
                     <i class="uil uil-estate"></i>
                     <span class="link-name">Dashboard</span>
                 </a>
@@ -54,9 +53,9 @@ if(!isset($_SESSION['user_name'])){
                 <div class="sub-menu">
                     <li>
                         <a href="cadet.html" class="link-name">Cadet</a>
-                        <a href="file_maintenance/faculty/faculty.php" class="link-name">Faculty</a>
-                        <a href="file_maintenance/department/department.php" class="link-name">Department</a>
-                        <a href="file_maintenance/course/course.php" class="link-name">Courses</a>
+                        <a href="/loginv1ghub/file_maintenance/faculty/faculty.php" class="link-name">Faculty</a>
+                        <a href="/loginv1ghub/file_maintenance/department/department.php" class="link-name">Department</a>
+                        <a href="/loginv1ghub/file_maintenance/course/course.php" class="link-name">Courses</a>
                     </li>
                 </div>
             </div>
@@ -217,73 +216,94 @@ if(!isset($_SESSION['user_name'])){
 
         <div class="dash-content">
             <div class="overview">
-                <div class="title">
-                    <i class="uil uil-tachometer-fast-alt"></i>
-                    <span class="text">Dashboard</span>
-                </div>
-
+            
+            <div class="container mt-4">
             <div class="activity">
-                <div class="title">
-                    <i class="uil uil-clock-three"></i>
-                    <span class="text">Recent Activity</span>
-                </div>
+                    
 
-                <div class="activity-data">
-                    <div class="data names">
-                        <span class="data-title">Name</span>
-                        <span class="data-list">1</span>
-                        <span class="data-list">1</span>
-                        <span class="data-list">1</span>
-                        <span class="data-list">1</span>
-                        <span class="data-list">1</span>
-                        <span class="data-list">1</span>
-                        <span class="data-list">1</span>
-                    </div>
-                    <div class="data email">
-                        <span class="data-title">Email</span>
-                        <span class="data-list">2</span>
-                        <span class="data-list">2</span>
-                        <span class="data-list">2</span>
-                        <span class="data-list">2</span>
-                        <span class="data-list">2</span>
-                        <span class="data-list">2</span>
-                        <span class="data-list">2</span>
-                    </div>
-                    <div class="data joined">
-                        <span class="data-title">Joined</span>
-                        <span class="data-list">3</span>
-                        <span class="data-list">3</span>
-                        <span class="data-list">3</span>
-                        <span class="data-list">3</span>
-                        <span class="data-list">3</span>
-                        <span class="data-list">3</span>
-                        <span class="data-list">3</span>
-                    </div>
-                    <div class="data type">
-                        <span class="data-title">Type</span>
-                        <span class="data-list">4</span>
-                        <span class="data-list">4</span>
-                        <span class="data-list">4</span>
-                        <span class="data-list">4</span>
-                        <span class="data-list">4</span>
-                        <span class="data-list">4</span>
-                        <span class="data-list">4</span>
-                    </div>
-                    <div class="data status">
-                        <span class="data-title">Status</span>
-                        <span class="data-list">5</span>
-                        <span class="data-list">5</span>
-                        <span class="data-list">5</span>
-                        <span class="data-list">5</span>
-                        <span class="data-list">5</span>
-                        <span class="data-list">5</span>
-                        <span class="data-list">5</span>
-                    </div>
+<?php include('message.php'); ?>
+<?php include('courseconfig.php'); ?>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h4>
+                    <i class="uil uil-clock-three"></i>
+                    <span class="text">Course</span>
+                    <a href="course-create.php" class="btn btn-primary float-end">Add Course</a>
+                </h4>
+            </div>
+            <div class="card-body">
+
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>CCODE</th>
+                            <th>CEQUI</th>
+                            <th>CNAME</th>
+                            <th>CDESC</th>
+                            <th>CUNITS</th>
+                            <th>CTYPE</th>
+                            <th>CADD</th>
+                            <th>CADD2</th>
+                            <th>CTYPEOLD</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php 
+                            $query = "SELECT * FROM course";
+                            $query_run = mysqli_query($conn, $query);
+
+                            if(mysqli_num_rows($query_run) > 0)
+                            {
+                                foreach($query_run as $course)
+                                {
+                                    ?>
+                                    <tr>
+                                        <td><?= $course['ccode']; ?></td>
+                                        <td><?= $course['cequi']; ?></td>
+                                        <td><?= $course['cname']; ?></td>
+                                        <td><?= $course['cdesc']; ?></td>
+                                        <td><?= $course['cunits']; ?></td>
+                                        <td><?= $course['ctype']; ?></td>
+                                        <td><?= $course['cadd']; ?></td>
+                                        <td><?= $course['cadd2']; ?></td>
+                                        <td><?= $course['ctypeold']; ?></td>
+                                        <td>
+                                            <a href="course-view.php?course_id=<?= $course['course_id']; ?>" class="btn btn-info btn-sm">View</a>
+                                            <a href="course-edit.php?course_id=<?= $course['course_id']; ?>" class="btn btn-success btn-sm">Edit</a>
+                                            <form action="course.php" method="POST" class="d-inline">
+                                                <button type="submit" name="delete_student" value="<?=$course['course_id'];?>" class="btn btn-danger btn-sm">Delete</button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                    <?php
+                                }
+                            }
+                            else
+                            {
+                                echo "<h5> No Record Found </h5>";
+                            }
+                        ?>
+                        
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
                 </div>
             </div>
         </div>
     </section>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
     <script src="navbar.js"></script>
     <script src="onclick.js"></script>
